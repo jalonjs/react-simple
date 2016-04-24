@@ -7,15 +7,15 @@
   box-shadow: 1px 2px 3px #40a070;
   display: block; }
 /*!
- *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.6.1 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url(font/32400f4e.fontawesome-webfont.eot);
-  src: url(font/32400f4e.fontawesome-webfont.eot?#iefix&v=4.5.0) format("embedded-opentype"), url(font/db812d8a.fontawesome-webfont.woff2) format("woff2"), url(font/a35720c2.fontawesome-webfont.woff) format("woff"), url(font/a3de2170.fontawesome-webfont.ttf) format("truetype"), url(font/f775f9cc.fontawesome-webfont.svg#fontawesomeregular) format("svg");
+  src: url(font/404a5255.fontawesome-webfont.eot);
+  src: url(font/404a5255.fontawesome-webfont.eot?#iefix&v=4.6.1) format("embedded-opentype"), url(font/926c93d2.fontawesome-webfont.woff2) format("woff2"), url(font/891e3f34.fontawesome-webfont.woff) format("woff"), url(font/fb650aaf.fontawesome-webfont.ttf) format("truetype"), url(font/bae4a87c.fontawesome-webfont.svg#fontawesomeregular) format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -122,31 +122,31 @@
     transform: rotate(359deg); } }
 
 .fa-rotate-90 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg); }
 
 .fa-rotate-180 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg); }
 
 .fa-rotate-270 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg); }
 
 .fa-flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1); }
 
 .fa-flip-vertical {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1); }
@@ -2087,3 +2087,95 @@
 
 .fa-percent:before {
   content: "\F295"; }
+
+.fa-gitlab:before {
+  content: "\F296"; }
+
+.fa-wpbeginner:before {
+  content: "\F297"; }
+
+.fa-wpforms:before {
+  content: "\F298"; }
+
+.fa-envira:before {
+  content: "\F299"; }
+
+.fa-universal-access:before {
+  content: "\F29A"; }
+
+.fa-wheelchair-alt:before {
+  content: "\F29B"; }
+
+.fa-question-circle-o:before {
+  content: "\F29C"; }
+
+.fa-blind:before {
+  content: "\F29D"; }
+
+.fa-audio-description:before {
+  content: "\F29E"; }
+
+.fa-volume-control-phone:before {
+  content: "\F2A0"; }
+
+.fa-braille:before {
+  content: "\F2A1"; }
+
+.fa-assistive-listening-systems:before {
+  content: "\F2A2"; }
+
+.fa-asl-interpreting:before,
+.fa-american-sign-language-interpreting:before {
+  content: "\F2A3"; }
+
+.fa-deafness:before,
+.fa-hard-of-hearing:before,
+.fa-deaf:before {
+  content: "\F2A4"; }
+
+.fa-glide:before {
+  content: "\F2A5"; }
+
+.fa-glide-g:before {
+  content: "\F2A6"; }
+
+.fa-signing:before,
+.fa-sign-language:before {
+  content: "\F2A7"; }
+
+.fa-low-vision:before {
+  content: "\F2A8"; }
+
+.fa-viadeo:before {
+  content: "\F2A9"; }
+
+.fa-viadeo-square:before {
+  content: "\F2AA"; }
+
+.fa-snapchat:before {
+  content: "\F2AB"; }
+
+.fa-snapchat-ghost:before {
+  content: "\F2AC"; }
+
+.fa-snapchat-square:before {
+  content: "\F2AD"; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto; }
