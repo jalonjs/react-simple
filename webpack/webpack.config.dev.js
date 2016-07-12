@@ -1,11 +1,18 @@
-var webpack = require('webpack')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var webpack = require('webpack');
 
 module.exports = {
-    entry: "./src/index.jsx",
+    // 修改 entry
+    entry: [
+        // 写在入口文件之前
+        "webpack-dev-server/client?http://0.0.0.0:3000",
+        "webpack/hot/only-dev-server",
+        // 这里是你的入口文件
+        "./src/index.jsx"
+    ],
     output: {
-        path: './output',
-        filename: "bundle.js"
+        path: __dirname + '/dist/',
+        filename: "bundle.js",
+        publicPath: "/dist/"
     },
     module: {
         loaders: [
@@ -15,7 +22,7 @@ module.exports = {
             }, {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                loader: 'babel'
+                loaders: ['react-hot', 'babel?presets[]=react,presets[]=es2015']
             }, {
                 test: /\.(png|jpg)$/,
                 exclude: /node_modules/,
@@ -25,5 +32,8 @@ module.exports = {
                 loader: 'url?limit=3000&name=font/[hash:8].[name].[ext]'
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ]
 }

@@ -1,11 +1,13 @@
-var webpack = require('webpack')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    entry: "./src/index.jsx",
+    entry: {
+        app: "./src/index.jsx"
+    },
     output: {
-        path: './output',
-        filename: "bundle.js"
+        path: './dist',
+        filename: "[name]_[hash:8].js"
     },
     module: {
         loaders: [
@@ -27,7 +29,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin('style.css'),
+        new ExtractTextPlugin('style_[hash:8].css'),
         new webpack.BannerPlugin('This file is created by Jalon')
     ]
 }
