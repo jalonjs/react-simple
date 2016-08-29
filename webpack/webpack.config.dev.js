@@ -7,7 +7,7 @@ module.exports = {
         "webpack-dev-server/client?http://0.0.0.0:3000",
         "webpack/hot/only-dev-server",
         // 这里是你的入口文件
-        "./src/index.jsx"
+        "./src/index.js"
     ],
     output: {
         path: __dirname + '/dist/',
