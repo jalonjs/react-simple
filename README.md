@@ -1,7 +1,7 @@
 # react-simple
 
 这是一个仅包含纯前端的工作流。
-react,webpack,gulp,ES6,hot-loader,redux,react-router。支持了字体图标。
+react,webpack,gulp,ES6,hot-loader,react-router。支持了字体图标。
 
 开发
 ```
