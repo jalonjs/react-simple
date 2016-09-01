@@ -10,7 +10,7 @@ ReactDOM.render(
     <Router history={hashHistory}>
         <Route path="/" component={App}>
             <Route path="demo" component={Demo}>
-                <IndexRedirect to="/demo/demo1" />
+                <IndexRedirect to="/demo/demo1"/>
                 <Route path="/demo/:name" component={Demo}/>
             </Route>
             <Route path="about" component={About}/>
