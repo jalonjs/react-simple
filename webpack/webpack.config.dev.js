@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
+    cache: true,
     // 修改 entry
     entry: [
         // 写在入口文件之前
@@ -18,22 +19,34 @@ module.exports = {
         loaders: [
             {
                 test: /\.(css|scss)/,
-                loaders: ['style', 'css', 'sass']
+                loaders: [
+                    'style',
+                    'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+                    'postcss',
+                    'sass'
+                ]
             }, {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                loaders: ['react-hot', 'babel?presets[]=react,presets[]=es2015']
+                loaders: ['react-hot', 'babel']
             }, {
-                test: /\.(png|jpg)$/,
+                test: /\.(gif|png|jpg)$/,
                 exclude: /node_modules/,
-                loader: 'url?limit=3000&name=image/[hash:8].[name].[ext]'
+                loaders: ['url?limit=3000&name=image/[hash:8].[name].[ext]']
             }, {
                 test: /\.(woff|woff2|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: 'url?limit=3000&name=font/[hash:8].[name].[ext]'
+                loaders: ['url?limit=3000&name=font/[hash:8].[name].[ext]']
             }
         ]
     },
+    postcss: function () {
+        return [require('autoprefixer')];
+    },
     plugins: [
         new webpack.HotModuleReplacementPlugin()
-    ]
+    ],
+    resolve: {
+        extensions: ['', '.js', 'jsx']
+    }
+    // devtool: isProduction()?null:'source-map'
 }

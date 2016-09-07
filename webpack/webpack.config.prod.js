@@ -13,7 +13,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.(css|scss)/,
-                loader: ExtractTextPlugin.extract('style', 'css!sass')
+                loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass')
             }, {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,

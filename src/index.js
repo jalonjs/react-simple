@@ -1,9 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './components/App'
-import Demo from './components/Demo'
-import About from './components/About'
-import 'font-awesome/css/font-awesome.css'
+import Demo from './components/Demo/demo'
+import About from './components/About/about'
 import {Router, Route, hashHistory, IndexRedirect} from 'react-router'
 
 ReactDOM.render(
