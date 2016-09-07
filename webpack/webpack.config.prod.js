@@ -28,6 +28,9 @@ module.exports = {
             }
         ]
     },
+    postcss: function () {
+        return [require('autoprefixer')];
+    },
     plugins: [
         new ExtractTextPlugin('style_[hash:8].css'),
         new webpack.BannerPlugin('This file is created by Jalon')
